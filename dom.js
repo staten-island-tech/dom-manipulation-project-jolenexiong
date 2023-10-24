@@ -1,7 +1,7 @@
 const DOMSelectors = {
     form: document.querySelector("#form"),
-    movie: document.querySelector(".movie"),
-    h2s: document.querySelectorAll("h2"),
+    name: document.querySelector(".name"),
+    h2s: document.querySelectorAll("h2s"),
 };
 
 DOMselectors.form.addEventListener("submit", function (event) {
@@ -13,7 +13,7 @@ function insertcard () {
     document.querySelector(".gallery").insertAdjacentHTML
     ("afterbegin",
         `<div class="card">
-            <h2 class="card.title">${DOMSelectors.movie.value}</h2>
+            <h2 class="card.title">${DOMSelectors.name.value}</h2>
         </div>`
 
     );
