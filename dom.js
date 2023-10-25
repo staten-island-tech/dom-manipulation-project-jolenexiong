@@ -8,26 +8,46 @@ const DOMSelectors = {
 };
 function album(){
     //write code here to get values
-}
+    const wholealbum = {
+        title: DOMSelectors.album.value,
+        author: DOMSelectors.artist.value,
+        image: DOMSelectors.picture.value,
+    };
+    injectcard(wholealbum);
+    clear();
+    remove();
+};
+
 function injectcard (form) {
-    DOMSelectors.gallery.insertAdjacentHTML
-    ("afterbegin",
-        `<div class="card">
-            <h2 class="card.title">${form.album.value}</h2>
-            <h2 class="aritst">${form.artist.value}</h2>
-            <h2 class="picture">${form.artist.value}</h2>
+    DOMSelectors.gallery.insertAdjacentHTML(
+    "afterbegin",
+      ` <div class="card">
+            <h2>${form.album.value}</h2>
+            <h2>${form.artist.value}</h2>
+            <h2> img src= "${form.picture.value}"</h2>
         </div>`
     );
-}
+};
 
 DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
     //need make album first
-   injectcard() //function dude, need ()
+   injectcard(form); //function dude, need ()
    //clear fields
    //remove buttons
 });
 
-//we can test injectcard here
-//get working
-injectcard({album:"test",artist:"shdfhjikl"})
+function clear () {
+    DOMSelectors.album.value = "";
+    DOMSelectors.artist.value = "";
+    DOMSelectors.picture.value = "";
+}
+
+function remove () {
+
+}
+
+
+// //we can test injectcard here
+// //get working
+// injectcard({album:"test",artist:"shdfhjikl"})

@@ -17,16 +17,22 @@
 
 
         <label for="Image">Image</label>
-        <input type="image" id="picture" class="picture" />
-        <input type="submit" value="Enter" />
+        <input type="text" id="picture" class="picture" />
+        
+        <input type="submit" value="Enter" class="submitbutton"/>
 
     </form>
 
     <div class="gallery">
-     
+        ` <div class="card">
+            <h2 class="card.title">${form.album.value}</h2>
+            <h2 class="aritst">${form.artist.value}</h2>
+            <h2 class="picture"> img src= ${form.picture.value}</h2>
+        </div>`
     </div>
 
     <script src="dom.js"></script>
+    <link rel="stylesheet" href="style.css">
 </body>
 
 </html>
