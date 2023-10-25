@@ -1,17 +1,26 @@
-.gallery {
-    height: 57vh;
-    width: 22%;
+html,
+body, 
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+.card {
+    height: 50vh;
+    width: 25%;
     background-color: #d1b3c4;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border-radius: 25px;
-    margin: 15px;
+    margin: 10px;
     text-align: center;
     box-shadow: 10px 10px 6px 7px #b392ac;
     position: relative;
-    transition: 0.5s;
+    transition: 0.3s;
+    padding: 25px;
 }
 
 .card:hover {
@@ -26,4 +35,13 @@
 body {
     background-color: #f3c5d8;
     font-size: 25px;
+}
+
+.title {
+    padding-bottom: 50px;
+}
+
+.gallery {
+    display: flex;
+    
 }

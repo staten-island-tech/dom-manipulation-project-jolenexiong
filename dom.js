@@ -4,10 +4,26 @@ const DOMSelectors = {
     artist: document.querySelector("#artist"),
     picture: document.querySelector("#picture"),
     h2s: document.querySelectorAll("h2s"),
+    gallery: document.querySelector(".gallery"),
     //add gallery
 };
-function album(){
-    //write code here to get values
+
+
+function injectcard() {
+    DOMSelectors.gallery.insertAdjacentHTML(
+        "afterbegin",
+        ` <div class="card">
+            <h2>${album.value}</h2>
+            <h2>${artist.value}</h2>
+            <h2> img src= "${picture.value}"</h2>
+            <button class = "button">Remove</button>
+        </div>`
+    );
+};
+
+DOMSelectors.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    //need make album first
     const wholealbum = {
         title: DOMSelectors.album.value,
         author: DOMSelectors.artist.value,
@@ -16,34 +32,18 @@ function album(){
     injectcard(wholealbum);
     clear();
     remove();
-};
-
-function injectcard (form) {
-    DOMSelectors.gallery.insertAdjacentHTML(
-    "afterbegin",
-      ` <div class="card">
-            <h2>${form.album.value}</h2>
-            <h2>${form.artist.value}</h2>
-            <h2> img src= "${form.picture.value}"</h2>
-        </div>`
-    );
-};
-
-DOMSelectors.form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    //need make album first
-   injectcard(form); //function dude, need ()
-   //clear fields
-   //remove buttons
+    //function dude, need ()
+    //clear fields
+    //remove buttons
 });
 
-function clear () {
+function clear() {
     DOMSelectors.album.value = "";
     DOMSelectors.artist.value = "";
     DOMSelectors.picture.value = "";
 }
 
-function remove () {
+function remove() {
 
 }
 
