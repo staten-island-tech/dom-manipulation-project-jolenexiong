@@ -5,7 +5,7 @@ const DOMSelectors = {
     picture: document.querySelector("#picture"),
     h2s: document.querySelectorAll("h2s"),
     gallery: document.querySelector(".gallery"),
-    //add gallery
+    button: document.querySelector("#button"),
 };
 
 
@@ -15,8 +15,9 @@ function injectcard() {
         ` <div class="card">
             <h2>${album.value}</h2>
             <h2>${artist.value}</h2>
-            <h2> img src= "${picture.value}"</h2>
-            <button class = "button">Remove</button>
+            <img src= "${picture.value}" class="pic">
+
+            <button class = "clear">Remove</button>
         </div>`
     );
 };
@@ -27,7 +28,7 @@ DOMSelectors.form.addEventListener("submit", function (event) {
     const wholealbum = {
         title: DOMSelectors.album.value,
         author: DOMSelectors.artist.value,
-        image: DOMSelectors.picture.value,
+        picture: DOMSelectors.picture.value,
     };
     injectcard(wholealbum);
     clear();
@@ -43,10 +44,13 @@ function clear() {
     DOMSelectors.picture.value = "";
 }
 
-function remove() {
-
+DOMSelectors.form.addEventListener("click", function (event) {
+remove();
 }
 
+function remove() {
+document.querySelectorAll("clear").forEach(cardy).addEventListener(delete);
+}
 
 // //we can test injectcard here
 // //get working
