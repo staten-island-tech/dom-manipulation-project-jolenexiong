@@ -6,6 +6,7 @@ const DOMSelectors = {
     h2s: document.querySelectorAll("h2s"),
     gallery: document.querySelector(".gallery"),
     button: document.querySelector("#button"),
+    card: document.getElementById("#card")
 };
 
 
@@ -44,12 +45,10 @@ function clear() {
     DOMSelectors.picture.value = "";
 }
 
-DOMSelectors.form.addEventListener("click", function (event) {
-remove();
-}
+
 
 function remove() {
-document.querySelectorAll("clear").forEach(cardy).addEventListener(delete);
+    card.remove();
 }
 
 // //we can test injectcard here

@@ -7,9 +7,9 @@ body,
 }
 
 .card {
-    height: 40vh;
-    width: 20vw;
-    background-color: #d1b3c4;
+    height: 50vh;
+    width: 25vw;
+    background-color: #A2A392;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,7 @@ body,
     border-radius: 25px;
     margin: 5px;
     text-align: center;
-    box-shadow: 10px 10px 6px 7px #b392ac;
+    box-shadow: 8px 8px 5px 6px #909181;
     position: relative;
     transition: 0.3s;
     padding: 50px;
@@ -31,17 +31,21 @@ body,
     border-radius: 25px;
     font-size: large;
     padding: 10px;
-    
+    background-color: #DEC3BE;
 }
 
 body {
-    background-color: #f3c5d8;
+    background-color: #D4CDC3;
     font-size: 25px;
 }
 
 .title {
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
+    background-color: #DEC3BE;
+    
+   
 }
 
 .gallery {
@@ -54,26 +58,32 @@ body {
 
 .pic {
     padding: 15px;
-    object-fit: contain;
+    height:27vh;
+    
 }
 
 .clear {
     border-radius: 25px;
     font-size: large;
     padding: 5px;
+    background-color:#DEC3BE;
 }
 
 .album {
     border-radius: 11px;
     padding: 10px;
+    background-color:#D8E2DC;
 }
 
 .artist {
     border-radius: 11px;
     padding: 10px;
+    background-color:#D9DBF1;
+    margin-top: 25px;
 }
 
 .picture {
     border-radius: 11px;
     padding: 10px;
+    background-color:#F1E3D3;
 }
