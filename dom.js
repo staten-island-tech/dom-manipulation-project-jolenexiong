@@ -6,7 +6,7 @@ const DOMSelectors = {
     h2s: document.querySelectorAll("h2s"),
     gallery: document.querySelector(".gallery"),
     button: document.querySelector("#button"),
-    card: document.getElementById("#card")
+    clear: document.querySelector("#clear"),
 };
 
 
@@ -45,10 +45,12 @@ function clear() {
     DOMSelectors.picture.value = "";
 }
 
-
-
 function remove() {
-    card.remove();
+    document.querySelectorAll("#clear");
+    clear.forEach((btn) => btn.addEventListener('click', function (event) {
+        event.target.parentElement.remove("card");
+    })
+    );
 }
 
 // //we can test injectcard here
