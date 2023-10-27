@@ -9,15 +9,15 @@ body,
 .card {
     height: 50vh;
     width: 25vw;
-    background-color: #A2A392;
+    background-color: #DEBAC0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border-radius: 25px;
-    margin: 5px;
+    margin: 20px;
     text-align: center;
-    box-shadow: 8px 8px 5px 6px #909181;
+    box-shadow: 8px 8px 5px 6px #c7a2a9;
     position: relative;
     transition: 0.3s;
     padding: 50px;
@@ -35,7 +35,7 @@ body,
 }
 
 body {
-    background-color: #D4CDC3;
+    background-color: #E39EC1;
     font-size: 25px;
 }
 
@@ -43,17 +43,18 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
-    background-color: #DEC3BE;
+    background-color: #C9C9EE;
     
    
 }
 
 .gallery {
     display: flex;
-    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     padding-top: 50px;
+   
 }
 
 .pic {
