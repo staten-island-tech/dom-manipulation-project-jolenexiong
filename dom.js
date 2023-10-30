@@ -5,8 +5,8 @@ const DOMSelectors = {
     picture: document.querySelector("#picture"),
     h2s: document.querySelectorAll("h2s"),
     gallery: document.querySelector(".gallery"),
-    button: document.querySelector("#button"),
     clear: document.querySelector("#clear"),
+    card: document.querySelector("#card"),
 };
 
 
@@ -32,27 +32,21 @@ DOMSelectors.form.addEventListener("submit", function (event) {
         picture: DOMSelectors.picture.value,
     };
     injectcard(wholealbum);
-    clear();
+    erase();
     remove();
-    //function dude, need ()
-    //clear fields
-    //remove buttons
+  
 });
 
-function clear() {
-    DOMSelectors.album.value = "";
+function erase() {
+    DOMSelectors.album.value = "";  
     DOMSelectors.artist.value = "";
     DOMSelectors.picture.value = "";
 }
 
 function remove() {
-    document.querySelectorAll("#clear");
-    clear.forEach((btn) => btn.addEventListener('click', function (event) {
-        event.target.parentElement.remove("card");
+    document.querySelectorAll(".clear").forEach((btn) => btn.addEventListener('click', function (event) {
+        event.target.parentElement.remove();
     })
     );
 }
 
-// //we can test injectcard here
-// //get working
-// injectcard({album:"test",artist:"shdfhjikl"})
