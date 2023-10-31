@@ -10,19 +10,6 @@ const DOMSelectors = {
 };
 
 
-function injectcard() {
-    DOMSelectors.gallery.insertAdjacentHTML(
-        "afterbegin",
-        ` <div class="card">
-            <h2>${album.value}</h2>
-            <h2>${artist.value}</h2>
-            <img src= "${picture.value}" class="pic">
-
-            <button class = "clear">Remove</button>
-        </div>`
-    );
-};
-
 DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
     //need make album first
@@ -37,6 +24,21 @@ DOMSelectors.form.addEventListener("submit", function (event) {
   
 });
 
+
+function injectcard() {
+    DOMSelectors.gallery.insertAdjacentHTML(
+        "afterbegin",
+        ` <div class="card">
+            <h2>${album.value}</h2>
+            <h2>${artist.value}</h2>
+            <img src= "${picture.value}" class="pic">
+
+            <button class = "clear">Remove</button>
+        </div>`
+    );
+};
+
+
 function erase() {
     DOMSelectors.album.value = "";  
     DOMSelectors.artist.value = "";
@@ -49,4 +51,5 @@ function remove() {
     })
     );
 }
+
 
